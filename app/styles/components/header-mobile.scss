@@ -1,0 +1,137 @@
+@import '../base/definitions';
+
+body>header-mobile {
+  height: 74px;
+  width: 100%;
+  background-color: #fff;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  position: fixed;
+  top: -80px;
+  z-index: 10;
+  transition: all 0.3s;
+  display: none;
+
+  &.active {
+    display: flex;
+    top: 0;
+    &.nav-visible {
+      div.toggle-nav {
+        i.material-icons {
+          &#openNavButton {
+            transform: scale(0) rotate(720deg);
+          }
+          &#closeNavButton {
+            transform: scale(1) rotate(0deg);
+          }
+        }
+      }
+      .nav {
+        top: 73px;
+        .item {
+          opacity: 1;
+        }
+      }
+    }
+
+
+    div.toggle-nav {
+      height: 74px;
+      width: 20%;
+      min-width: 100px;
+      padding: 0 0 0 20px;
+      user-select: none;
+      i.material-icons {
+        color: $text;
+        font-size: 28px;
+        line-height: 72px;
+        cursor: pointer;
+        position: absolute;
+        transition: transform 0.3s;
+        &#openNavButton {
+          transform: scale(1) rotate(0deg);
+        }
+        &#closeNavButton {
+          transform: scale(0) rotate(720deg);
+        }
+      }
+    }
+
+    .nav {
+      height: auto;
+      margin: 0 auto;
+      width: 100%;
+      position: absolute;
+      top: -400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      transition: top 0.3s;
+      z-index: -1;
+      background-color: #fff;
+      .item {
+        position: relative;
+        text-align: center;
+        width: 90%;
+        transition: width 0.3s, margin 0.3s;
+        border-bottom: 1px solid #BDBDBD;
+        opacity: 0;
+        a {
+          color: $text;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 52px;
+          width: 100%;
+          text-transform: uppercase;
+          text-decoration: none;
+          cursor: pointer;
+          &:hover, &:focus {
+            color: $accent;
+          }
+        }
+      }
+    }
+
+    .logo {
+      display: inline-block;
+      line-height: 74px;
+      height: 30px;
+      font-size: 24px;
+      color: #212121;
+      font-weight: 400;
+      opacity: 1;
+      width: 100%;
+      background: url('/images/corsa-logo-small.png') no-repeat center right;
+      background-size: contain;
+      margin-right: 12px;
+    }
+
+    .request-demo-btn {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 20%;
+      min-width: 100px;
+      height: 74px;
+      line-height: 14px;
+      text-align: center;
+      background-color: $positive;
+      color: #fff;
+      font-size: 11px;
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: .5px;
+      cursor: pointer;
+      text-transform: uppercase;
+      &:active, :hover {
+        background-color: $positive;
+      }
+    }
+
+  }
+}

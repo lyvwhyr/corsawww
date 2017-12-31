@@ -1,0 +1,75 @@
+/**
+ *  corsa
+ *  (c) Brandon Moody <brandon@thef33d.com>
+ */
+
+$positive : #6D9F00;
+$negative : #A70008;
+$warning : #FFB400;
+$primary : #1D5A96;
+$primaryLight : #1689E5;
+$secondary : #942A89;
+$accent : #FF9800;
+$text : #212121;
+$textLight : #686868;
+
+
+.primary {
+  color: $primary;
+}
+
+.primaryLight {
+  color: $primaryLight;
+}
+
+.secondary {
+  color: $secondary;
+}
+
+.accent {
+  color: $accent;
+}
+
+.positive {
+  color: $positive;
+}
+
+.negative {
+  color: $negative;
+}
+
+.warning {
+  color: $warning;
+}
+
+.typewriter span {
+  opacity: 0;
+}
+
+.typewriter span.show {
+  opacity: 1;
+}
+
+/* IE issues */
+.lt-ie9 .typewriter span {
+  display: inline-block;
+}
+
+.lt-ie9 .typewriter span.whitespace {
+  min-width: 0.35em;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.noselect {
+  user-select: none; /* Non-prefixed version, currently not supported by any browser */
+}

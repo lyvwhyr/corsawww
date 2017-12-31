@@ -1,0 +1,88 @@
+body>header {
+  position: fixed;
+  left: 0;
+  top: -200px;
+  width: 100%;
+  background-color: #fff;
+  border-top: 5px solid #dc4926;
+  padding-top: 132px;
+  z-index: 10;
+  transition: padding-top 0.2s;
+  overflow: hidden;
+  display: none;
+  &.active {
+    top: 0;
+    display: flex;
+  }
+  &.fixed {
+    padding-top: 0;
+    box-shadow: 0 0px 1px rgba(0,0,0,0.15);
+    z-index: 100;
+    .logo {
+      opacity: 0.0;
+    }
+    .nav .mini-logo {
+      width: 45px;
+      margin: 0 15px 0 0;
+    }
+  }
+
+  .logo {
+    width: 100%;
+    height: 30px;
+    top: 50px;
+    position: absolute;
+    line-height: 32px;
+    font-size: 32px;
+    color: #212121;
+    text-align: center;
+    transition: opacity 0.15s;
+    background: url('/images/corsa-logo-large.png') no-repeat center center;
+    background-size: contain;
+  }
+
+  .nav {
+    height: 70px;
+    margin: 0 auto;
+    width: 940px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    transition: all 0.5s;
+
+
+
+    .mini-logo {
+      position: absolute;
+      font-size: 24px;
+      color: #6d6d6d;
+      width: 0;
+      margin: 0;
+      height: 70px;
+      line-height: 70px;
+      overflow: hidden;
+      transition: width 0.3s, margin 0.3s;
+    }
+
+
+    .item {
+      text-align: center;
+      width: auto;
+      transition: width 0.3s, margin 0.3s;
+      a {
+        color: #6d6d6d;
+        font-size: 16px;
+        line-height: 16px;
+        font-family: 'Open Sans', sans-serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover, &:focus {
+          color: #dc4926;
+        }
+      }
+    }
+
+  }
+}
